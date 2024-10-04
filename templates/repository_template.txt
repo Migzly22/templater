@@ -1,0 +1,26 @@
+
+import { DataTypes, type InitOptions, type ModelAttributes, Model, VIRTUAL, type VirtualDataType } from "sequelize";
+import DatabaseConnector from "../../utils/DatabaseConnector";
+
+export default class [TITLENAME] extends Model {
+    declare _id: number;
+}
+
+let options: InitOptions = {
+    sequelize: DatabaseConnector.getConnection(),
+    tableName: [TITLENAME].name,
+    schema: [TABLENAME],
+    paranoid: true
+}
+
+let fields: ModelAttributes = {
+    _id: {
+        type: new DataTypes.INTEGER,
+        unique: true,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+    },
+}
+
+[TITLENAME].init(fields,options)

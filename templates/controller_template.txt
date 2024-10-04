@@ -1,0 +1,11 @@
+
+import [TITLENAME] from "../models/coreDB/UserModel";
+import BaseController from "../utils/BaseController";
+import { Request, Response } from "express";
+import { ErrorResponseHandler } from "../utils/BaseControllerHelper";
+
+export default class [TITLENAME]Controller extends BaseController{ 
+   constructor() { 
+      super([TITLENAME].name)
+   }
+}

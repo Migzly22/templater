@@ -1,0 +1,17 @@
+import BaseRouter from "../../utils/BaseRouter";
+import [TITLENAME]Controller from "../../controllers/[TITLENAME]Controller";
+import { Mappings } from "../../types/BaseRouterTypes";
+
+export default class [TITLENAME]Route extends BaseRouter<[TITLENAME]Controller>{
+    private _controller: [TITLENAME]Controller = new [TITLENAME]Controller();
+
+    constructor() {
+        super(new [TITLENAME]Controller())
+    }
+
+    getAdditionalMapping = (): Mappings[] => {
+        return [
+      
+        ];
+    };
+}

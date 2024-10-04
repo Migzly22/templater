@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# Import functions from functions.sh
+source ./main_function.sh
+
+#Check if the parameter is greater than 2 or equal
 if [ $# -lt 2 ]; then
   echo "Usage: $0 <param1> <param2> ... <paramN>"
   exit 1
@@ -10,13 +15,13 @@ TABLE_NAME="$3"
 
 case $CREATE_TYPE in
   "create-route")
-    echo "You entered a number between 1 and 3."
+    create_route $FILE_NAME
     ;;
-  "create-model")
-    echo "You entered a number between 4 and 6."
+  "create-controller")
+    create_controller $FILE_NAME
     ;;
   "create-repository")
-    echo "You entered a number between 7 and 10."
+    create_repository $FILE_NAME $TABLE_NAME
     ;;
   *)
     echo "You entered an invalid command."
