@@ -23,6 +23,9 @@ case $CREATE_TYPE in
   "create-repository")
     create_repository $FILE_NAME $TABLE_NAME
     ;;
+  "init")
+    init
+    ;;
   *)
     echo "You entered an invalid command."
     ;;
