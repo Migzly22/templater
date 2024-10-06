@@ -16,6 +16,8 @@ init() {
 
     create_file "templates/config.txt" "config" "json" ""
     create_file "templates/db.config.txt" "config" "ts" "db."
+    sed "s/\[APPNAME\]/$1/g;"  "templates/package.txt" >"package.json"
+    cp "templates/tsconfig.txt" "tsconfig.ts"
 }
 
 create_route() {
